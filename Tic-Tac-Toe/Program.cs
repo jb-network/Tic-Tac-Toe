@@ -94,6 +94,7 @@ Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
 
 //The test win can be updated with currentletter each round and checked for a winner before moving to the next player. 
+// This should return a bool true or false once set up in a Method, True if won, False if lost.  check each line. 
 //Add across x 3
 if (board4[0, 0] == '1' && board4[0, 1] == '2' && board4[0, 2] == CurrentLetter) Console.WriteLine("Test: WINNER!");
 // Add up x 3
