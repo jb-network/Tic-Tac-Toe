@@ -74,7 +74,12 @@ Console.WriteLine("***********************************");
 */
 //Test user selection
 //array test 2
-string CurrentPlayer = "Player 1";
+Console.WriteLine("Pick the current player for testing: 'Player1' or 'Player2'");
+string CurrentPlayer = Console.ReadLine();
+
+char CurrentLetter;
+if (CurrentPlayer == "Player1") CurrentLetter = 'X';
+else CurrentLetter = 'O';
 char[,] board4 = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
 
 Console.WriteLine("***********************************");
@@ -92,39 +97,42 @@ Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
 
+//User to get user input and update array.  Need to add 
 char UserSelection = Convert.ToChar(Console.Read());
-
-//char UserSelection = '1';
 
 switch (UserSelection)
 {
     case '1': 
-        board4[0, 0] = 'X';
+        board4[0, 0] = CurrentLetter;
         break;
     case '2':
-        board4[0, 1] = 'X';
+        board4[0, 1] = CurrentLetter;
         break;
     case '3':
-        board4[0, 2] = 'X';
+        board4[0, 2] = CurrentLetter;
         break;
     case '4':
-        board4[1, 0] = 'X';
+        board4[1, 0] = CurrentLetter;
         break;
     case '5':
-        board4[1, 1] = 'X';
+        board4[1, 1] = CurrentLetter;
         break;
     case '6':
-        board4[1, 2] = 'X';
+        board4[1, 2] = CurrentLetter;
         break;
     case '7':
-        board4[2, 0] = 'X';
+        board4[2, 0] = CurrentLetter;
         break;
     case '8':
-        board4[2, 1] = 'X';
+        board4[2, 1] = CurrentLetter;
         break;
     case '9':
-        board4[2, 2] = 'X';
+        board4[2, 2] = CurrentLetter;
         break;
+    default:
+        Console.WriteLine("Not a valid selection");
+        break;
+        
 }
 
 
