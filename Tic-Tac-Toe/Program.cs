@@ -9,79 +9,19 @@
 //Test area
 // User Selection menu
 // User loop to set up numbers
-/*
-string CurrentPlayer = "Player 1";
-Console.WriteLine("***********************************");
-Console.WriteLine($"{CurrentPlayer}'s Turn");
-Console.WriteLine("Select one of the numbers below:");
-Console.WriteLine("***********************************");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| 1 | 2 | 3 |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| 4 | 5 | 6 |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| 7 | 8 | 9 |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine("***********************************");
-Console.WriteLine("\n");
 
-//Prototype board
-char[,] board = new char[3, 3];
-board[0, 0] = 'X';
-Console.WriteLine("***********************************");
-Console.WriteLine("Sample board");
-Console.WriteLine("***********************************");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board[0, 0]} | O | X |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| O | X | X |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| X | O | O |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine("***********************************");
-
-//array test 1
-char[,] board2 = new char[3, 3] { { '1','2','3'}, { '4','5','6' }, { '7','8','9' } };
-Console.WriteLine("***********************************");
-Console.WriteLine("Sample Array test board");
-Console.WriteLine("***********************************");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board2[0, 0]} | {board2[0, 1]} | {board2[0, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board2[1, 0]} | {board2[1, 1]} | {board2[1, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board2[2, 0]} | {board2[2, 1]} | {board2[2, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine("***********************************");
-
-
-//array test 2
-char[,] board3 = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
-
-board3[0, 0] = 'X';
-Console.WriteLine("***********************************");
-Console.WriteLine("Sample Array test board");
-Console.WriteLine("***********************************");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board3[0, 0]} | {board3[0, 1]} | {board3[0, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board3[1, 0]} | {board3[1, 1]} | {board3[1, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine($"| {board3[2, 0]} | {board3[2, 1]} | {board3[2, 2]} |");
-Console.WriteLine("|---+---+---|");
-Console.WriteLine("***********************************");
-
-*/
-//Test user selection
-//array test 2
+//This is a rough prototype of the game loop.  More is neede but the basics are here. 
 Console.WriteLine("Pick the current player for testing: 'Player1' or 'Player2'");
 string CurrentPlayer = Console.ReadLine();
-
 char CurrentLetter;
+//Sets current letter based on player
 if (CurrentPlayer == "Player1") CurrentLetter = 'X';
 else CurrentLetter = 'O';
+
+//Builds 3x3 array
 char[,] board4 = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
 
+//Sample set up menu at start of game
 Console.WriteLine("***********************************");
 Console.WriteLine($"{CurrentPlayer}'s Turn");
 Console.WriteLine("***********************************");
@@ -96,15 +36,12 @@ Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
 
+//Sample user input
 Console.WriteLine("Select one of the numbers:");
-//User to get user input and update array.  Need to add 
-
-
 char UserSelection = Convert.ToChar(Console.Read());
-
-
-
 Console.Clear();
+
+//Test switch to update board
 switch (UserSelection)
 {
     case '1': 
@@ -139,8 +76,7 @@ switch (UserSelection)
         break;
         
 }
-
-
+//Test board after update. Updates to 0,2 or number 3 will trigger test win
 Console.WriteLine("***********************************");
 Console.WriteLine($"{CurrentPlayer}'s Turn");
 Console.WriteLine("***********************************");
@@ -155,6 +91,7 @@ Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
 
+//The test win can be updated with currentletter each round and checked for a winner before moving to the next player. 
 //Add across x 3
 if (board4[0, 0] == '1' && board4[0, 1] == '2' && board4[0, 2] == CurrentLetter) Console.WriteLine("Test: WINNER!");
 // Add up x 3
