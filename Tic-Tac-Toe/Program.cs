@@ -102,6 +102,17 @@ if (board4[0, 0] == '1' && board4[0, 1] == '2' && board4[0, 2] == CurrentLetter)
 
 Console.ReadKey();
 
+//Testing Player switching
+int round = 0;
+Console.WriteLine("Set round for testing, Round number: ");
+round = Convert.ToInt32(Console.ReadLine());
+int PlayerTracker = 0;
+if ( round % 2 != 0) CurrentPlayer = "Player1";
+else CurrentPlayer = "Player2";
+  
+Console.Write($"Current Player: {CurrentPlayer}");
+Console.ReadKey();
+
 public class MainGame
 {
 //Set up
