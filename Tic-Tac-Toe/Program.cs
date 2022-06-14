@@ -111,6 +111,81 @@ else CurrentPlayer = "Player2";
 Console.Write($"Current Player: {CurrentPlayer}");
 Console.ReadKey();
 
+//Testing Loop to check for X and O
+/*
+int trackertest = 0;
+do
+{
+    //Sample set up menu at start of game
+    Console.WriteLine("***********************************");
+    Console.WriteLine($"{CurrentPlayer}'s Turn");
+    Console.WriteLine("***********************************");
+    Console.WriteLine("Sample Array test board");
+    Console.WriteLine("***********************************");
+    Console.WriteLine("|---+---+---|");
+    Console.WriteLine($"| {board4[0, 0]} | {board4[0, 1]} | {board4[0, 2]} |");
+    Console.WriteLine("|---+---+---|");
+    Console.WriteLine($"| {board4[1, 0]} | {board4[1, 1]} | {board4[1, 2]} |");
+    Console.WriteLine("|---+---+---|");
+    Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
+    Console.WriteLine("|---+---+---|");
+    Console.WriteLine("***********************************");
+
+    //Sample user input
+    Console.WriteLine("Select one of the numbers:");
+    char UserSelection = Convert.ToChar(Console.Read());
+    Console.Clear();
+
+    //Test switch to update board
+    switch (UserSelection)
+    {
+        case '1':
+            if (board4[0, 0] == 'X' || board4[0, 0] == 'Y')
+            {
+                Console.WriteLine("That space is aleady taken");
+                trackertest = 0;
+                break;
+            }
+            else
+            {
+                board4[0, 0] = CurrentLetter;
+                trackertest = 1;
+                break;
+            }
+        case '2':
+            board4[0, 1] = CurrentLetter;
+            break;
+        case '3':
+            board4[0, 2] = CurrentLetter;
+            break;
+        case '4':
+            board4[1, 0] = CurrentLetter;
+            break;
+        case '5':
+            board4[1, 1] = CurrentLetter;
+            break;
+        case '6':
+            board4[1, 2] = CurrentLetter;
+            break;
+        case '7':
+            board4[2, 0] = CurrentLetter;
+            break;
+        case '8':
+            board4[2, 1] = CurrentLetter;
+            break;
+        case '9':
+            board4[2, 2] = CurrentLetter;
+            break;
+        default:
+            Console.WriteLine("Not a valid selection");
+            trackertest = 0;
+            break;
+    }
+}
+
+while (trackertest == 0)
+*/
+
 public class MainGame
 {
 //Set up
@@ -126,6 +201,8 @@ public class MainGame
 // swap player after end of turn (not sure how to do this) could use if player 1 add one to current player, if player 2 subtract one to current player
 
 //After 9 breaks loop gives win to cat. 
+
+
 
 
 }
