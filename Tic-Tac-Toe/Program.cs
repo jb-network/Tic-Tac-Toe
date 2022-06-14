@@ -9,6 +9,7 @@
 //Test area
 // User Selection menu
 // User loop to set up numbers
+/*
 string CurrentPlayer = "Player 1";
 Console.WriteLine("***********************************");
 Console.WriteLine($"{CurrentPlayer}'s Turn");
@@ -69,9 +70,79 @@ Console.WriteLine("|---+---+---|");
 Console.WriteLine($"| {board3[2, 0]} | {board3[2, 1]} | {board3[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
+
+*/
+//Test user selection
+//array test 2
+string CurrentPlayer = "Player 1";
+char[,] board4 = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
+
+Console.WriteLine("***********************************");
+Console.WriteLine($"{CurrentPlayer}'s Turn");
+Console.WriteLine("Select one of the numbers below:");
+Console.WriteLine("***********************************");
+Console.WriteLine("Sample Array test board");
+Console.WriteLine("***********************************");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[0, 0]} | {board4[0, 1]} | {board4[0, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[1, 0]} | {board4[1, 1]} | {board4[1, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine("***********************************");
+
+char UserSelection = Convert.ToChar(Console.Read());
+
+//char UserSelection = '1';
+
+switch (UserSelection)
+{
+    case '1': 
+        board4[0, 0] = 'X';
+        break;
+    case '2':
+        board4[0, 1] = 'X';
+        break;
+    case '3':
+        board4[0, 2] = 'X';
+        break;
+    case '4':
+        board4[1, 0] = 'X';
+        break;
+    case '5':
+        board4[1, 1] = 'X';
+        break;
+    case '6':
+        board4[1, 2] = 'X';
+        break;
+    case '7':
+        board4[2, 0] = 'X';
+        break;
+    case '8':
+        board4[2, 1] = 'X';
+        break;
+    case '9':
+        board4[2, 2] = 'X';
+        break;
+}
+
+
+Console.WriteLine("***********************************");
+Console.WriteLine($"{CurrentPlayer}'s Turn");
+Console.WriteLine("Select one of the numbers below:");
+Console.WriteLine("***********************************");
+Console.WriteLine("Sample Array test board");
+Console.WriteLine("***********************************");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[0, 0]} | {board4[0, 1]} | {board4[0, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[1, 0]} | {board4[1, 1]} | {board4[1, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
+Console.WriteLine("|---+---+---|");
+Console.WriteLine("***********************************");
 Console.ReadKey();
-
-
 
 public class MainGame
 {
