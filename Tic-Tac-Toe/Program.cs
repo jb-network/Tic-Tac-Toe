@@ -10,7 +10,9 @@
 // User Selection menu
 // User loop to set up numbers
 
+
 //This is a rough prototype of the game loop.  More is neede but the basics are here. 
+// A cheap trick for player rotation could be to use round with Mod to get even or odd round number.  If odd player 1 turn, if even player 2 turn. There might be an better way.  
 Console.WriteLine("Pick the current player for testing: 'Player1' or 'Player2'");
 string CurrentPlayer = Console.ReadLine();
 char CurrentLetter;
