@@ -84,7 +84,6 @@ char[,] board4 = new char[3, 3] { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '
 
 Console.WriteLine("***********************************");
 Console.WriteLine($"{CurrentPlayer}'s Turn");
-Console.WriteLine("Select one of the numbers below:");
 Console.WriteLine("***********************************");
 Console.WriteLine("Sample Array test board");
 Console.WriteLine("***********************************");
@@ -97,9 +96,15 @@ Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
 
+Console.WriteLine("Select one of the numbers:");
 //User to get user input and update array.  Need to add 
+
+
 char UserSelection = Convert.ToChar(Console.Read());
 
+
+
+Console.Clear();
 switch (UserSelection)
 {
     case '1': 
@@ -138,7 +143,6 @@ switch (UserSelection)
 
 Console.WriteLine("***********************************");
 Console.WriteLine($"{CurrentPlayer}'s Turn");
-Console.WriteLine("Select one of the numbers below:");
 Console.WriteLine("***********************************");
 Console.WriteLine("Sample Array test board");
 Console.WriteLine("***********************************");
@@ -150,6 +154,12 @@ Console.WriteLine("|---+---+---|");
 Console.WriteLine($"| {board4[2, 0]} | {board4[2, 1]} | {board4[2, 2]} |");
 Console.WriteLine("|---+---+---|");
 Console.WriteLine("***********************************");
+
+//Add across x 3
+if (board4[0, 0] == '1' && board4[0, 1] == '2' && board4[0, 2] == CurrentLetter) Console.WriteLine("Test: WINNER!");
+// Add up x 3
+// Add diagonal x 2
+
 Console.ReadKey();
 
 public class MainGame
