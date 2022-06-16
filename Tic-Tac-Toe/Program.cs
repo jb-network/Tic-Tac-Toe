@@ -184,7 +184,7 @@ public class Board
                     Board.BoardStatus[2, 2] = Symbol;
                     break;
                 default:
-                    Console.WriteLine("The slection you made is not valid");
+                    Console.WriteLine("The selection you made is not valid");
                     Console.WriteLine("Please try again");                                        
                     break;
             }
