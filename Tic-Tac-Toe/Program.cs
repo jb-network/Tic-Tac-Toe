@@ -11,8 +11,9 @@ public class Game
     public void NewGame()
     {
         //Build Game start
+        int GameRound = 1;
  
-        //Build Player object
+        //Build Players
         //Player 1
         int Player1ID = 1;
         char Player1Symbol = 'X';
@@ -24,14 +25,11 @@ public class Game
         char Player2Symbol = 'O';
         string Player2Name = Player.GetPlayerNames(Player2ID);
         Player Player_2 = new Player(Player2Name, Player2ID, Player2Symbol);
-
-        //string GameRoundPlayer = Player_1.UserName;
+        
         //Create Board
         Board Gameboard = new();
-
+       
         //Game Play loop
-        int GameRound = 1;
-        
         while (GameRound < 10)
         {
             //Sets current player
@@ -62,7 +60,7 @@ public class Game
                 Console.ReadKey();
                 Environment.Exit(0);
             }
-            else if(GameRound == 9)
+            else if(GameRound == 9) //If the game ends in a tie
             {                
                 Console.WriteLine("The Game Ended in a Tie");
                 Console.WriteLine("YOU ARE NOT THE WINNER, BUT YOU ARE NOT THE LOSER");
