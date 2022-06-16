@@ -43,7 +43,7 @@ public class Game
             //Shows the board before the current player takes an action
             Board.ShowBoardBeforeMove(Gameboard, GameRound, GameRoundPlayer); 
             
-            //Allows the player to pick location for Sumbol
+            //Allows the player to pick location for Symbol
             Board.PlayerChoice(GameRoundPlayer, GameRoundSymbol, Gameboard);
             
             //Shows the board after the current player takes an action
@@ -148,39 +148,101 @@ public class Board
             //Will not work if user enters a string rather than a number
             //bool isNumber = int.TryParse(s1, out int n); would test for this, but this is beyond the scope of this task
 
-            Console.WriteLine($"Hello {PlayerName}.");
-            Console.WriteLine($"Please choose a number to place an {Symbol} in");
+            Console.WriteLine($"{PlayerName}, please choose a number to place an {Symbol} in");
             UserSelection = Convert.ToInt16(Console.ReadLine());
 
             switch (UserSelection)
             {
                 case 1:
-                    Board.BoardStatus[0, 0] = Symbol;
+                    if (Board.BoardStatus[0, 0] == 'X' || Board.BoardStatus[0, 0] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[0, 0] = Symbol;
                     break;
+
                 case 2:
-                    Board.BoardStatus[0, 1] = Symbol;
+                    if (Board.BoardStatus[0, 1] == 'X' || Board.BoardStatus[0, 1] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[0, 1] = Symbol;
                     break;
+
                 case 3:
-                    Board.BoardStatus[0, 2] = Symbol;
+                    if (Board.BoardStatus[0, 2] == 'X' || Board.BoardStatus[0, 2] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[0, 2] = Symbol;
                     break;
+
                 case 4:
-                    Board.BoardStatus[1, 0] = Symbol;
+                    if (Board.BoardStatus[1, 0] == 'X' || Board.BoardStatus[1, 0] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[1, 0] = Symbol;
                     break;
+
                 case 5:
-                    Board.BoardStatus[1, 1] = Symbol;
+                    if (Board.BoardStatus[1, 1] == 'X' || Board.BoardStatus[1, 1] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[1, 1] = Symbol;
                     break;
+
                 case 6:
-                    Board.BoardStatus[1, 2] = Symbol;
+                    if (Board.BoardStatus[1, 2] == 'X' || Board.BoardStatus[1, 2] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[1, 2] = Symbol;
                     break;
+
                 case 7:
-                    Board.BoardStatus[2, 0] = Symbol;
+                    if (Board.BoardStatus[2, 0] == 'X' || Board.BoardStatus[2, 0] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[2, 0] = Symbol;
                     break;
+
                 case 8:
-                    Board.BoardStatus[2, 1] = Symbol;
+                    if (Board.BoardStatus[2, 1] == 'X' || Board.BoardStatus[2, 1] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[2, 1] = Symbol;
                     break;
+
                 case 9:
-                    Board.BoardStatus[2, 2] = Symbol;
+                    if (Board.BoardStatus[2, 2] == 'X' || Board.BoardStatus[2, 2] == 'O')
+                    {
+                        Console.WriteLine("That square is aleady taken, please try again");
+                        UserSelection = -1;
+                        break;
+                    }
+                    else Board.BoardStatus[2, 2] = Symbol;
                     break;
+
                 default:
                     Console.WriteLine("The selection you made is not valid");
                     Console.WriteLine("Please try again");                                        
