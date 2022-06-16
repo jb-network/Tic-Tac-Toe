@@ -54,18 +54,18 @@ public class Game
             //Check for 3 in a row
             bool CurrentWin = WinCheck(Gameboard, GameRound, GameRoundPlayer, GameRoundSymbol) ;
             if (CurrentWin == true)
-            {
-                Console.WriteLine("WINNER, WINNER, CHICKEN DINNER!");
+            {                
                 Console.WriteLine($"Congratulations {GameRoundPlayer} you won Tic-Tac-Toe!");
+                Console.WriteLine("WINNER, WINNER, CHICKEN DINNER!");
                 Console.WriteLine("The game is over");
                 Console.WriteLine("Press any key to end the game");
                 Console.ReadKey();
                 Environment.Exit(0);
             }
             else if(GameRound == 9)
-            {
-                Console.WriteLine("YOU NOT THE WINNER, BUT YOU ARE NOT THE LOSER");
+            {                
                 Console.WriteLine("The Game Ended in a Tie");
+                Console.WriteLine("YOU ARE NOT THE WINNER, BUT YOU ARE NOT THE LOSER");
                 Console.WriteLine("Press any key to end the game");
                 Console.ReadKey();
                 Environment.Exit(0);
